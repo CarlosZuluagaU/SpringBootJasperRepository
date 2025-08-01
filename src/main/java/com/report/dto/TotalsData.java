@@ -1,17 +1,16 @@
 package com.report.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@Setter
+@Getter
 public class TotalsData {
+    // Getters y Setters
     private BigDecimal subtotal;
     private BigDecimal tax;
     private BigDecimal grandTotal;
 
-    // Getters y Setters
-    public BigDecimal getSubtotal() { return subtotal; }
-    public void setSubtotal(BigDecimal subtotal) { this.subtotal = subtotal; }
-    public BigDecimal getTax() { return tax; }
-    public void setTax(BigDecimal tax) { this.tax = tax; }
-    public BigDecimal getGrandTotal() { return grandTotal; }
-    public void setGrandTotal(BigDecimal grandTotal) { this.grandTotal = grandTotal; }
 }
