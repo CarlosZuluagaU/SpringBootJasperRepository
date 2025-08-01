@@ -1,38 +1,38 @@
-# Generador de Facturas con Spring Boot y JasperReports
+# Invoice Generator with Spring Boot and JasperReports
 
-Este proyecto es una aplicación web completa que permite generar facturas dinámicas en formato PDF a partir de un formulario web interactivo. Es una demostración de cómo integrar un backend de Java con la potente librería de reportes JasperReports.
-
----
-
-## 🚀 Características
-
--   **Formulario Web Interactivo:** Una interfaz de usuario moderna creada con HTML y Tailwind CSS para ingresar los datos de la factura.
--   **Cálculos Automáticos:** El subtotal, IVA y total se calculan en tiempo real en el frontend.
--   **Backend Robusto:** Construido con Spring Boot, expone una API REST para recibir los datos de la factura.
--   **Generación Dinámica de PDF:** Utiliza JasperReports para poblar una plantilla `.jrxml` con los datos recibidos y generar un PDF profesional.
--   **Descarga Automática:** El PDF generado se descarga automáticamente en el navegador del usuario.
--   **Diseño Profesional:** La plantilla de la factura incluye estilos, tablas para items, logo y firma.
+This project is a complete web application that allows for the dynamic generation of PDF invoices from an interactive web form. It serves as a demonstration of how to integrate a Java backend with the powerful JasperReports reporting library.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 Features
+
+-   **Interactive Web Form:** A modern user interface created with HTML and Tailwind CSS to input invoice data.
+-   **Automatic Calculations:** Subtotal, VAT, and total are calculated in real-time on the frontend.
+-   **Robust Backend:** Built with Spring Boot, it exposes a REST API to receive invoice data.
+-   **Dynamic PDF Generation:** Uses JasperReports to populate a `.jrxml` template with the received data and generate a professional PDF.
+-   **Automatic Download:** The generated PDF is automatically downloaded in the user's browser.
+-   **Professional Design:** The invoice template includes styles, tables for items, a logo, and a signature.
+
+---
+
+## 🛠️ Technologies Used
 
 ### Backend
--   **Java 17:** Lenguaje de programación principal.
--   **Spring Boot 3:** Framework para la creación de la aplicación y el servidor web.
--   **JasperReports:** Librería para la generación de los reportes en PDF.
--   **Maven:** Gestor de dependencias y construcción del proyecto.
+-   **Java 17:** Main programming language.
+-   **Spring Boot 3:** Framework for creating the application and web server.
+-   **JasperReports:** Library for generating PDF reports.
+-   **Maven:** Dependency management and project build tool.
 
 ### Frontend
--   **HTML5:** Estructura del formulario web.
--   **Tailwind CSS:** Framework de CSS para un diseño rápido y moderno.
--   **JavaScript (Vanilla):** Para la interactividad del formulario, cálculos y comunicación con el backend.
+-   **HTML5:** Structure of the web form.
+-   **Tailwind CSS:** CSS framework for rapid and modern design.
+-   **JavaScript (Vanilla):** For form interactivity, calculations, and communication with the backend.
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
-El proyecto está organizado de la siguiente manera para mantener una separación clara de responsabilidades:
+The project is organized as follows to maintain a clear separation of concerns:
 
 
 .
@@ -42,59 +42,59 @@ El proyecto está organizado de la siguiente manera para mantener una separació
 │   │   │   └── com
 │   │   │       └── report
 │   │   │           ├── controller  // InvoiceController.java
-│   │   │           ├── dto         // Clases DTO (InvoiceData, etc.)
+│   │   │           ├── dto         // DTO Classes (InvoiceData, etc.)
 │   │   │           ├── service     // ReportService.java
 │   │   │           └── InvoiceApplication.java
 │   │   └── resources
 │   │       ├── static
 │   │       │   ├── images          // LogoZulu.png, firmaZulu.png
-│   │       │   └── invoice_form.html  // El frontend
+│   │       │   └── invoice_form.html  // The frontend
 │   │       └── templates
 │   │           └── report
-│   │               └── invoice_template.jrxml  // Plantilla Jasper
-├── pom.xml         // Dependencias de Maven
-└── README.md       // Este archivo
+│   │               └── invoice_template.jrxml  // Jasper Template
+├── pom.xml         // Maven dependencies
+└── README.md       // This file
 
 
 ---
 
-## ⚙️ ¿Cómo Ejecutar el Proyecto?
+## ⚙️ How to Run the Project
 
-Sigue estos pasos para poner en marcha la aplicación:
+Follow these steps to get the application up and running:
 
-### Prerrequisitos
--   Tener instalado **JDK 17** o superior.
--   Tener instalado **Apache Maven**.
--   Un IDE como **IntelliJ IDEA** o Eclipse.
+### Prerequisites
+-   **JDK 17** or higher installed.
+-   **Apache Maven** installed.
+-   An IDE like **IntelliJ IDEA** or Eclipse.
 
-### Pasos
+### Steps
 
-1.  **Clonar o Descargar el Proyecto:**
-    Obtén todos los archivos y ábrelos en tu IDE.
+1.  **Clone or Download the Project:**
+    Get all the files and open them in your IDE.
 
-2.  **Verificar las Imágenes:**
-    Asegúrate de que tu logo (`LogoZulu.png`) y tu firma (`firmaZulu.png`) estén ubicados en la carpeta `src/main/resources/static/images/`.
+2.  **Verify the Images:**
+    Make sure your logo (`LogoZulu.png`) and signature (`firmaZulu.png`) are located in the `src/main/resources/static/images/` folder.
 
-3.  **Iniciar el Backend:**
-    -   Abre la clase `InvoiceApplication.java`.
-    -   Ejecuta el método `main()`.
-    -   Espera a que la consola muestre el mensaje `Tomcat started on port 8080`.
+3.  **Start the Backend:**
+    -   Open the `InvoiceApplication.java` class.
+    -   Run the `main()` method.
+    -   Wait for the console to display the message `Tomcat started on port 8080`.
 
-4.  **Abrir el Frontend:**
-    -   Busca el archivo `invoice_form.html` en la carpeta `src/main/resources/static/`.
-    -   Haz clic derecho sobre él y selecciona `Open in > Browser`.
+4.  **Open the Frontend:**
+    -   Find the `invoice_form.html` file in the `src/main/resources/static/` folder.
+    -   Right-click on it and select `Open in > Browser`.
 
-5.  **¡Generar una Factura!**
-    -   Rellena los datos en el formulario.
-    -   Añade algunos productos o servicios.
-    -   Haz clic en el botón "Generar Factura PDF". El archivo se descargará automáticamente.
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+5.  **Generate an Invoice!**
+    -   Fill in the data on the form.
+    -   Add some products or services.
+    -   Click the "Generate PDF Invoice" button. The file will be downloaded automatically.
 
 ---
 
-Creado por **Carlos Zuluaga** - 2025
+## 📄 License
+
+This project is under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+Created by **Zuluaga** - 2025
